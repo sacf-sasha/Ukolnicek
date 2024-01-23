@@ -1,8 +1,9 @@
 import NovyUkol from "./NovyUkol";
 import {useState} from 'react'
+import PolozkaUkolu from "./PolozkaUkolu";
 
 export default function Ukolnicek() {
-    const [seznamUkolu, nastavSeznamUkolu] = useState(['Novy ukol', 'dalsi ukol'])
+    const [seznamUkolu, nastavSeznamUkolu] = useState([''])
 
     function pridejUkol(novyUkol) {
         nastavSeznamUkolu([...seznamUkolu, novyUkol])
@@ -12,8 +13,15 @@ export default function Ukolnicek() {
     return (
         <>
         <NovyUkol pridejUkol={pridejUkol}/>
-        <br/>
-        {seznamUkolu}
+        {/* {
+        seznamUkolu.map((ukol)=>(
+            <>
+            <span>{ukol}</span>
+            <br/>
+            </>
+        ))
+        } */}
+        {seznamUkolu.map((ukol, poradi) => <PolozkaUkolu ukol={ukol} poradi={poradi}></PolozkaUkolu>)}
         <button onClick={() => pridejUkol("Nový úkol")}>Pridej nahodný ukol</button>
     </>
 )
