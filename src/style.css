@@ -1,0 +1,14 @@
+body{
+    margin: 30px 150px;
+}
+span{
+    padding: 10px;
+}
+.ukol{
+    margin-bottom: 15px;
+    border: 1px solid black;
+    display: inline-block;
+}
+#ukoly{
+    margin: 30px 10px;
+}
