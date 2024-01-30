@@ -8,7 +8,17 @@ span{
     margin-bottom: 15px;
     border: 1px solid black;
     display: inline-block;
+    
+}
+.textUkolu{
+    color: blue;
+    font-Weight: bold; 
 }
 #ukoly{
     margin: 30px 10px;
+}
+.splneno{
+    text-decoration: line-through;
+    color: rgb(104, 196, 0);
+    font-Weight: bold; 
 }
