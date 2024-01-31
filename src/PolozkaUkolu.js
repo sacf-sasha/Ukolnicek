@@ -7,7 +7,7 @@
             {ukol.splneno && <span className="splneno">{ukol.text}</span>}
 
             <button onClick={()=> SmazatUkol(poradi)}>smazat</button> 
-            <button onClick={()=> fceSpln(poradi, )}>Hotovy</button> 
+            <button onClick={()=> fceSpln(poradi)}>Hotovy</button> 
         </div>
         <br/>
         </>
