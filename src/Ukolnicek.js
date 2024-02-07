@@ -1,6 +1,7 @@
 import NovyUkol from "./NovyUkol";
 import {useState} from 'react'
 import PolozkaUkolu from "./PolozkaUkolu";
+import { Button } from "@mui/material";
 
 export default function Ukolnicek() {
 
@@ -60,8 +61,9 @@ export default function Ukolnicek() {
         {seznamUkolu.map((ukol, poradi) => 
         <PolozkaUkolu ukol={ukol} key={poradi} poradi={poradi}SmazatUkol={SmazatUkol} fceSpln={splnUkol}/>)}
         </div>
-        <span>Počet úkolů: {seznamUkolu.length}, počet Hotových úkolů: {seznamUkolu.filter(ukol => ukol.splneno != true).length}, Počet úkolů TODO: {seznamUkolu.length-seznamUkolu.filter(ukol => !ukol.splneno).length}</span>
-        <button onClick={() => pridejUkol("Nový úkol")}>Pridej nahodný ukol</button>
+        <span>Počet úkolů: {seznamUkolu.length}, počet Hotových úkolů: {seznamUkolu.length-seznamUkolu.filter(ukol => !ukol.splneno).length}, Počet úkolů TODO: {seznamUkolu.filter(ukol => ukol.splneno != true).length}</span>
+        {/* <button onClick={() => pridejUkol("Nový úkol")}>Pridej nahodný ukol</button> */}
+        <Button variant="contained" color="success" onClick={() => pridejUkol("Nový úkol")}>Pridej nahodný ukol</Button>
        
     </>
 )
